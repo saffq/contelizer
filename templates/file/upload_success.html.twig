@@ -1,0 +1,6 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>File Successfully Uploaded and Transformed</h2>
+    <p>Download transformed file: <a href="{{ asset(newFileName) }}" download="{{ newFileName }}">link</a></p>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Upload a Text File</h2>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button type="submit">Upload</button>
+    {{ form_end(form) }}
+
+    {% if newFileName is defined %}
+        <p>Download transformed file: <a href="{{ asset(newFileName) }}">link</a></p>
+    {% endif %}
+{% endblock %}
